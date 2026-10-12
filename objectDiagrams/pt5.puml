@@ -1,0 +1,63 @@
+@startuml
+
+left to right direction
+
+object "<u>phpDemo:Folder</u>" as phpDemo {
+name = "php_demo1"
+}
+
+object "<u>sourceFiles:Folder</u>" as sourceFiles {
+name = "Source Files"
+}
+
+phpDemo -- sourceFiles
+
+object "<u>includePath:Folder</u>" as includePath {
+name = "Include Path"
+}
+
+phpDemo -- includePath
+
+object "<u>remoteFiles:Folder</u>" as remoteFiles {
+name = "Remote Files"
+}
+
+phpDemo -- remoteFiles
+
+object "<u>phalcon:Folder</u>" as phalcon {
+name = ".phalcon"
+}
+
+sourceFiles -- phalcon
+
+object "<u>cache:Folder</u>" as cache {
+name = "cache"
+}
+
+sourceFiles -- cache
+
+object "<u>publicFolder:Folder</u>" as publicFolder {
+name = "public"
+}
+
+sourceFiles -- publicFolder
+
+object "<u>htaccess:File</u>" as htaccess {
+name = ".htaccess"
+}
+
+publicFolder -- htaccess
+
+object "<u>htrouter:File</u>" as htrouter {
+name = ".htrouter.php"
+}
+
+publicFolder -- htrouter
+
+object "<u>indexHtml:File</u>" as indexHtml {
+name = "index.html"
+}
+
+publicFolder -- indexHtml
+
+@enduml

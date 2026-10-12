@@ -1,0 +1,23 @@
+@startuml
+
+object "<u>softwareEngineering:Course</u>" as c1 {
+name = "CS5800 - Advanced Software Engineering"
+}
+
+object "<u>davarpanah:Instructor</u>" as ins {
+firstName = "Nima"
+lastName = "Davarpanah"
+officeNumber = "3-2636"
+}
+
+c1 -- ins: instructors
+
+object "<u>cleanCode:Textbook</u>" as tb {
+title = "Clean Code"
+author = "Robert C. Martin"
+publisher = "Pearson"
+}
+
+c1 -- tb: textbooks
+
+@enduml
